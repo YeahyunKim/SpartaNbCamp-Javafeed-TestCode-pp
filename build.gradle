@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.0'
+    id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'com.sparta'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    // MAIL
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '3.0.5'
+    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '4.0.5'
+//
+    // JWT
+    compileOnly group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
+
+    // JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // Validation 유효성
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // MySQL
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // JUnit
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Swagger
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
