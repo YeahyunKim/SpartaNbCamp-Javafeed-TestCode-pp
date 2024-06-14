@@ -1,4 +1,4 @@
-package com.sparta.myselectshop.mvc;
+package com.sparta.javafeed.mvc;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
