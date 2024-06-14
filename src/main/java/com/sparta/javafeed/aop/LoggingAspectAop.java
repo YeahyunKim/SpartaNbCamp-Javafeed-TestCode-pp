@@ -19,23 +19,21 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 public class LoggingAspectAop {
 
     // 모든 컨트롤러에서 작동시키기 위한 Pointcut
-//    @Pointcut("execution(* com.sparta.javafeed.controller.UserController.*(..))")
-//    private void allController() {}
+    @Pointcut("execution(* com.sparta.javafeed.controller.*.*(..))")
+    private void allController() {}
 
     // 실행시킬 위치를 선택
-    @Around("execution(* com.sparta.javafeed.controller..*.*(..))")
-    public Object logRequestUrlHttpMethod(ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("allController()")
+    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("실행");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (attributes != null) {
             HttpServletRequest request = attributes.getRequest();
-            log.info("Request URL: " + request.getRequestURL() + " HTTP Method: {}: " + request.getMethod());
+            log.info("[Request URL] : " + request.getRequestURL() + " / [HTTP Method] : " + request.getMethod());
+        } else {
+            log.info("잘못된 요청입니다.");
         }
-        // 메서드 실행
         Object result = joinPoint.proceed();
-
-        // Response 정보 로깅
-        log.info("Response: {}: " + result);
 
         return result;
     }
