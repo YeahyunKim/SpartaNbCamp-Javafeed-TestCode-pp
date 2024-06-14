@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sparta.javafeed.entity.CommentTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-06-14T08:40:01" hostname="Youiui-MacBookPro.local" time="0.583">
+  <properties/>
+  <testcase name="[validate()] 사용자 인증 성공" classname="com.sparta.javafeed.entity.CommentTest" time="0.205"/>
+  <testcase name="[update()] 댓글 수정" classname="com.sparta.javafeed.entity.CommentTest" time="0.129"/>
+  <testcase name="[increaseLikeCnt()] 좋아요 증가" classname="com.sparta.javafeed.entity.CommentTest" time="0.128"/>
+  <testcase name="decreaseLikeCnt()] 좋아요 감소" classname="com.sparta.javafeed.entity.CommentTest" time="0.12"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

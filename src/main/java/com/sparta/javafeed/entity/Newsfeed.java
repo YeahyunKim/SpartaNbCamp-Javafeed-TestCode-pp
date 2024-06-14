@@ -7,6 +7,7 @@ import com.sparta.javafeed.exception.CustomException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Setter
 @Getter
 @NoArgsConstructor
 @Table(name="Newsfeed")
