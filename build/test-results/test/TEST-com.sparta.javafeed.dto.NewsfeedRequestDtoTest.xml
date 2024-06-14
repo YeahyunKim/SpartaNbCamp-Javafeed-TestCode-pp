@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sparta.javafeed.dto.NewsfeedRequestDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-14T08:55:35" hostname="Youiui-MacBookPro.local" time="0.096">
-  <properties/>
-  <testcase name="[toEntity()] Entity 생성" classname="com.sparta.javafeed.dto.NewsfeedRequestDtoTest" time="0.096"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -27,10 +27,10 @@ class NewsfeedTest {
                 .description("자바는 객체지향 프로그래밍 언어 OOP 이다.")
                 .build();
 
-        Newsfeed testNewsfeed = new Newsfeed(requestDto.getTitle(), requestDto.getDescription(), user);
+        newsfeed = new Newsfeed(requestDto.getTitle(), requestDto.getDescription(), user);
     }
 
-    
+
     private User setUser() {
         SignupRequestDto requestDto = SignupRequestDto.builder()
                 .accountId("insidesy1234")
