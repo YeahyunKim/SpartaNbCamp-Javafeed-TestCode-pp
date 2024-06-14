@@ -17,6 +17,7 @@ public class UserInfoRequestDto {
 
     private String intro; // 한 줄 소개는 비울 수 있음
 
+    @Builder
     public UserInfoRequestDto(String name, String email, String intro) {
         this.name = name;
         this.email = email;
