@@ -3,6 +3,7 @@ package com.sparta.javafeed.dto;
 import com.sparta.javafeed.entity.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -15,4 +16,10 @@ public class UserInfoRequestDto {
     private String email;
 
     private String intro; // 한 줄 소개는 비울 수 있음
+
+    public UserInfoRequestDto(String name, String email, String intro) {
+        this.name = name;
+        this.email = email;
+        this.intro = intro;
+    }
 }
