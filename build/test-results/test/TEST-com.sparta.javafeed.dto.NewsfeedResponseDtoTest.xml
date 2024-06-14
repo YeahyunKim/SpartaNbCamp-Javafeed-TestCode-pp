@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sparta.javafeed.dto.NewsfeedResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-14T09:11:21" hostname="Youiui-MacBookPro.local" time="0.168">
+<testsuite name="com.sparta.javafeed.dto.NewsfeedResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-14T10:58:11" hostname="Youiui-MacBookPro.local" time="0.167">
   <properties/>
-  <testcase name="[toDto()] ResponseDto로 반환" classname="com.sparta.javafeed.dto.NewsfeedResponseDtoTest" time="0.168"/>
+  <testcase name="[toDto()] ResponseDto로 반환" classname="com.sparta.javafeed.dto.NewsfeedResponseDtoTest" time="0.167"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
