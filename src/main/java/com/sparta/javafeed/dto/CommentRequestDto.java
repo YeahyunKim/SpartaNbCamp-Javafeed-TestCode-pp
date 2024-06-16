@@ -1,13 +1,15 @@
 package com.sparta.javafeed.dto;
 
-import com.sparta.javafeed.entity.Comment;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
+//@AllArgsConstructor
 public class CommentRequestDto {
 
     @NotBlank(message = "댓글 내용을 작성해주세요.")
@@ -16,6 +18,10 @@ public class CommentRequestDto {
 
     @Builder
     private CommentRequestDto(String description) {
+        this.description = description;
+    }
+
+    private void CommentResponseDto(String description) {
         this.description = description;
     }
 }
