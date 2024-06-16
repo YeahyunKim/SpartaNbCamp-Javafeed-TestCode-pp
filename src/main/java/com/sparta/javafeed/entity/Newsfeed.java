@@ -5,6 +5,7 @@ import com.sparta.javafeed.enums.ErrorType;
 import com.sparta.javafeed.enums.UserRole;
 import com.sparta.javafeed.exception.CustomException;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,6 +19,7 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="Newsfeed")
 public class Newsfeed extends Timestamped {
 

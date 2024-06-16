@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sparta.javafeed.service.NewsfeedServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-06-16T04:25:33" hostname="Youiui-MacBookPro.local" time="1.508">
+  <properties/>
+  <testcase name="checkValidatedNewsfeed() - 게시글 유효성 검사 및 조회" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.505"/>
+  <testcase name="updateNewsfeed() - 게시글 수정 성공" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.069"/>
+  <testcase name="getNewsfeed() - 게시글 조회 실패" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.002"/>
+  <testcase name="getNewsfeed() - 게시물 조회" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.616"/>
+  <testcase name="deleteNewsfeed() 게시글 삭제" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.122"/>
+  <testcase name="findNewsfeed() - 게시글 찾기" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.062"/>
+  <testcase name="save() - 게시물 생성" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.063"/>
+  <testcase name="checkValidatedNewsfeed() - 게시글 유효성 검사 실패" classname="com.sparta.javafeed.service.NewsfeedServiceTest" time="0.062"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

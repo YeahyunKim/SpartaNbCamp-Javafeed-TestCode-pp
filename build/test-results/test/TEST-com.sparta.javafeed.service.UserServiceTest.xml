@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sparta.javafeed.service.UserServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-16T03:55:34" hostname="Youiui-MacBookPro.local" time="0.485">
-  <properties/>
-  <testcase name="getUser() 사용자 조회" classname="com.sparta.javafeed.service.UserServiceTest" time="0.485"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
