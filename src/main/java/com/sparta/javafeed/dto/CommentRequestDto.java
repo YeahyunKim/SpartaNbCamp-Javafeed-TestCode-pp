@@ -17,7 +17,7 @@ public class CommentRequestDto {
     private String description;
 
     @Builder
-    private CommentRequestDto(String description) {
+    public CommentRequestDto(String description) {
         this.description = description;
     }
 
