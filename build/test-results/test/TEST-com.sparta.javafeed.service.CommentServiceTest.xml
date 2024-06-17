@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sparta.javafeed.service.CommentServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-17T02:00:05" hostname="Youiui-MacBookPro.local" time="0.681">
-  <properties/>
-  <testcase name="댓글 삭제 성공" classname="com.sparta.javafeed.service.CommentServiceTest" time="0.681"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

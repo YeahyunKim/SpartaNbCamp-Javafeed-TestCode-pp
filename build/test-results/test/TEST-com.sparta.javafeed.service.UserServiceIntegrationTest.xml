@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sparta.javafeed.service.UserServiceIntegrationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-06-17T02:19:53" hostname="Youiui-MacBookPro.local" time="0.831">
+  <properties/>
+  <testcase name="signupUser() 회원가입" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.428"/>
+  <testcase name="findByAccountId() AccountId로 회원 찾기" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.006"/>
+  <testcase name="getUser() 회원 조회" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.004"/>
+  <testcase name="updateUser() 회원 정보 수정" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.013"/>
+  <testcase name="updatePassword() 비밀번호 변경" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.261"/>
+  <testcase name="updateUserEmailSent() 이메일 전송" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.017"/>
+  <testcase name="updateUserStatus() 이메일 인증" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.01"/>
+  <testcase name="findByEmail() email로 회원 찾기" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.005"/>
+  <testcase name="logout() 로그아웃" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.009"/>
+  <testcase name="deactiveUser() 회원 탈퇴" classname="com.sparta.javafeed.service.UserServiceIntegrationTest" time="0.076"/>
+  <system-out><![CDATA[11:19:51.042 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.sparta.javafeed.service.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:19:51.094 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.sparta.javafeed.JavafeedApplication for test class com.sparta.javafeed.service.UserServiceIntegrationTest
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-06-17T11:19:51.233+09:00  INFO 15589 --- [javafeed] [    Test worker] c.s.j.s.UserServiceIntegrationTest       : Starting UserServiceIntegrationTest using Java 17.0.10 with PID 15589 (started by youihyonkim in /Users/youihyonkim/Desktop/project/2024/스파르타-내일배움/SpartaNbCamp-Javafeed-TestCode-pp)
+2024-06-17T11:19:51.233+09:00  INFO 15589 --- [javafeed] [    Test worker] c.s.j.s.UserServiceIntegrationTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-17T11:19:51.588+09:00  INFO 15589 --- [javafeed] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-17T11:19:51.622+09:00  INFO 15589 --- [javafeed] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
+2024-06-17T11:19:51.959+09:00  INFO 15589 --- [javafeed] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-06-17T11:19:51.966+09:00  INFO 15589 --- [javafeed] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T11:19:51.967+09:00  INFO 15589 --- [javafeed] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T11:19:51.999+09:00  INFO 15589 --- [javafeed] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T11:19:52.000+09:00  INFO 15589 --- [javafeed] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2024-06-17T11:19:52.091+09:00  INFO 15589 --- [javafeed] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-17T11:19:52.113+09:00  INFO 15589 --- [javafeed] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-17T11:19:52.129+09:00  INFO 15589 --- [javafeed] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-17T11:19:52.253+09:00  INFO 15589 --- [javafeed] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-17T11:19:52.266+09:00  INFO 15589 --- [javafeed] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-17T11:19:52.402+09:00  INFO 15589 --- [javafeed] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6738e8b2
+2024-06-17T11:19:52.403+09:00  INFO 15589 --- [javafeed] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-17T11:19:52.901+09:00  INFO 15589 --- [javafeed] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table comment (
+        id bigint not null auto_increment,
+        created_at datetime(6),
+        modified_at datetime(6),
+        description varchar(255) not null,
+        like_cnt bigint,
+        newsfeed_id bigint not null,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table email_auth (
+        id bigint not null auto_increment,
+        auth_token varchar(255),
+        email varchar(255),
+        expire_date datetime(6),
+        expired bit,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table newsfeed (
+        id bigint not null auto_increment,
+        created_at datetime(6),
+        modified_at datetime(6),
+        description LONGTEXT not null,
+        title varchar(255) not null,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table user (
+        id bigint not null auto_increment,
+        created_at datetime(6),
+        modified_at datetime(6),
+        account_id varchar(255) not null,
+        email varchar(255) not null,
+        email_sent_at datetime(6),
+        intro varchar(255),
+        name varchar(255) not null,
+        password varchar(255) not null,
+        refresh_token varchar(255),
+        user_role enum ('ADMIN','USER') not null,
+        user_status enum ('ACTIVE','BEFORE_VERIFIED','DEACTIVATE'),
+        user_status_modified_at datetime(6),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table user_like (
+        id bigint not null auto_increment,
+        created_at datetime(6),
+        modified_at datetime(6),
+        content_id bigint not null,
+        content_type enum ('COMMENT','NEWSFEED') not null,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table user 
+       drop index UKnrrhhb0bsexvi8ch6wnon9uog
+Hibernate: 
+    alter table user 
+       add constraint UKnrrhhb0bsexvi8ch6wnon9uog unique (account_id)
+Hibernate: 
+    alter table user 
+       drop index UKob8kqyqqgmefl0aco34akdtpe
+Hibernate: 
+    alter table user 
+       add constraint UKob8kqyqqgmefl0aco34akdtpe unique (email)
+Hibernate: 
+    alter table comment 
+       add constraint FK89ygvwj8w96uicc3vr8igubw3 
+       foreign key (newsfeed_id) 
+       references newsfeed (id)
+Hibernate: 
+    alter table comment 
+       add constraint FK8kcum44fvpupyw6f5baccx25c 
+       foreign key (user_id) 
+       references user (id)
+Hibernate: 
+    alter table newsfeed 
+       add constraint FKn9qc1h5bynw6b7i95bbsy364m 
+       foreign key (user_id) 
+       references user (id)
+Hibernate: 
+    alter table user_like 
+       add constraint FKjsfb2urrv0shlti7sfy9iktpi 
+       foreign key (user_id) 
+       references user (id)
+2024-06-17T11:19:53.005+09:00  INFO 15589 --- [javafeed] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-17T11:19:53.204+09:00  INFO 15589 --- [javafeed] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2024-06-17T11:19:53.380+09:00  WARN 15589 --- [javafeed] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-17T11:19:53.562+09:00  INFO 15589 --- [javafeed] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4602fa2f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a4bd9e4, org.springframework.security.web.context.SecurityContextHolderFilter@1b0709e7, org.springframework.security.web.header.HeaderWriterFilter@5feceb2f, org.springframework.web.filter.CorsFilter@8ea1521, org.springframework.security.web.authentication.logout.LogoutFilter@14972600, com.sparta.javafeed.jwt.JwtExceptionFilter@35bfa7be, com.sparta.javafeed.jwt.JwtAuthorizationFilter@48682f91, com.sparta.javafeed.jwt.JwtAuthenticationFilter@f1e5f85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1703e50d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6cfa20c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7424a39e, org.springframework.security.web.session.SessionManagementFilter@b41ceac, org.springframework.security.web.access.ExceptionTranslationFilter@3b96ea23, org.springframework.security.web.access.intercept.AuthorizationFilter@7dd3f20e]
+2024-06-17T11:19:53.721+09:00  INFO 15589 --- [javafeed] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 61932 (http) with context path '/'
+2024-06-17T11:19:53.726+09:00  INFO 15589 --- [javafeed] [    Test worker] c.s.j.s.UserServiceIntegrationTest       : Started UserServiceIntegrationTest in 2.586 seconds (process running for 3.017)
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* insert for
+        com.sparta.javafeed.entity.User */insert 
+    into
+        user (account_id, created_at, email, email_sent_at, intro, modified_at, name, password, refresh_token, user_role, user_status, user_status_modified_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.account_id=?
+Hibernate: 
+    /* update
+        for com.sparta.javafeed.entity.User */update user 
+    set
+        account_id=?,
+        email=?,
+        email_sent_at=?,
+        intro=?,
+        modified_at=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        user_role=?,
+        user_status=?,
+        user_status_modified_at=? 
+    where
+        id=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.account_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.email_sent_at,
+        u1_0.intro,
+        u1_0.modified_at,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.user_role,
+        u1_0.user_status,
+        u1_0.user_status_modified_at 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
