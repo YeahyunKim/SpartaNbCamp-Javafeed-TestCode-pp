@@ -109,7 +109,7 @@ class UserServiceIntegrationTest {
         userService.updatePassword(request, testUser.getAccountId());
 
         // then
-        testUser = userService.findByAccountId(testUser.getAccountId());
+        testUser = userService.findByAcco untId(testUser.getAccountId());
         assertNotNull(testUser);
         assertTrue(passwordEncoder.matches(request.getNewPassword(), testUser.getPassword()));
     }
